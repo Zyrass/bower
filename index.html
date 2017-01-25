@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bower</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <style>
+            * {
+                transition: all .5s ease-in-out;
+            }
+            body {
+                box-sizing: border-box;
+                background-color: #3e3e3e;
+            }
+            span img.bower {
+                position: absolute;
+                z-index: 10;
+                transform: rotate(-25deg);
+                width: 20%;
+                top: 60px;;
+                left: 50px;
+                opacity: 1;
+                filter: sepia(50%);
+            }
+            span img.bower2  {
+                position: absolute;
+                right: 80px;
+                z-index: 10;
+                width: 15%;
+                margin: 0;
+            }
+
+            span img.bower:hover {
+                filter: sepia(0%);
+            }
+            h1, h3 {
+                text-align: center;
+                color: #004488 !important;
+                text-shadow: 2px 2px 2px #3e3e3e;
+            }
+            .bg-warning {
+                padding: 5px 0 15px 0;
+                box-shadow: 2px 2px 2px #000;
+                margin-bottom: 20px;
+            }
+            .bg-warning:hover {
+                box-shadow: 4px 4px 4px #000;;
+            }
+            .bg-warning, .well   {
+                border-radius: 0% !important;
+            }
+            .well   {
+                margin-top: 20px;
+                height: 710px;
+            }
+            .well:first-child:hover, .well:nth-child(2):hover, .well:nth-child(3):hover   {
+                
+                background-color: #ddd
+            }
+            code {
+                background-color: #3e3e3e; 
+                color: #44a036; 
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <span><img src="https://bower.io/img/bower-logo.svg" alt="" class="bower"></span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="bg-warning text-center">
+                    <h1><span><img src="https://scr.sad.supinfo.com/articles/resources/149178/2850/0.png" alt="" class="bower2"></span></h1>
+                    <blockquote>
+                        <p class="lead"><strong><small>Bower nous permet d'éviter de répéter les mêmes tâches lors de la conception d'un nouveau site... <br />
+                        En sommes, c'est un outil de management de librairies pour le web.</small></strong></p>                
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 well">
+                    <h3><span class="glyphicon glyphicon-folder-open"></span> - Création du répertoire</h3>
+                    <hr>
+                    <p>- Il est évident que pour pouvoir utiliser Bower, il faut un répertoire... </p>
+                    <p>- Deux possibilités :</p>
+                    <dl>
+                        <dt>1 °) Installation classique</dt>
+                        <dd>Si vous êtes en locahost, dirigez-vous dans votre outils suivi du répertoire appelé "www" et créer le répertoire avec le nom qu'il vous plaira.</dd>
+                        <dt>2 °) Installation via Git</dt>
+                        <dd>L'avantage de git c'est que vous pourrez versionner votre projet. Créer un repository sur votre compte git, copier l'adresse de votre repository puis dans l'invite de commande au même endroit que précédemment, utiliser la commande suivante : </p>
+                        <hr>
+                        <code>git clone URL_A_INDIQUER</code> 
+                        <hr>
+                        <p>puis valider par la touche entrer. De là faite un : </p>
+                        <hr>
+                        <code>cd le_nom_de_votre_repository</code>
+                        <hr>
+                        <p>et valider par entrer.</p></dd>
+                    </dl>
+                    <p>- Voilà magie vous avez installé un dépôt git que vous allez pouvoir administrer aisément.</p>
+                </div>
+
+                <div class="col-sm-4 well">
+                    <h3><span class="glyphicon glyphicon-save"></span> - Installer Bower</h3> 
+                    <hr>
+                    <p>- Avant toute chose il faut installer Bower dans le répertoire précédemment créer.</p>
+                    <p>- Pour celà, on va utiliser l'invite de commande et saisir quelques lignes de codes.</p>
+                    <p>- Dans un premier temps on se rends dans son répertoire qu'on a précédemment créer avec la ligne de code suivante :</p>
+                    <hr>
+                    <code>
+                        cd le_chemin_de_votre_repertoire_ici
+                    </code>
+                    <hr>
+                    <p>- Puis on valide par la touche entrer du clavier.</p>
+                    <p>- Une fois qu'on se trouve dans son répertoire, on saisit la ligne de code suivante qui nous permettra d'installer bower dans notre dossier.</p>
+                    <hr>
+                    <code>
+                        npm install -g bower
+                    </code>
+                    <hr>
+                    <p>- Voilà une fois que cette ligne est taper, bower est prêt à être utiliser.</p>
+                </div>
+
+                <div class="col-sm-4 well">
+                    <h3><span class="glyphicon glyphicon-globe"></span> - Installer les dépendances</h3> 
+                    <hr>
+                    <p>- Maintenant c'est la partie la plus cool qui soit.</p>
+                    <p>- Pour installer une dépendance, rien de plus simple, il faut se rendre sur le site : <a href="https://bower.io/search/">bower.io/search/</a> Ici vous n'aurez qu'à taper ce que vous voulez installer.</p>
+                    <p>- Méfiez-vous à la colonne "stars" plus le nombre de stars est élevée, mieux c'est. Si vous avez un paquet qui vous intéresse, mais qu'il n'y a que 3 stars, éviter.. autant laissé aux autres les potentiels bug qu'il pourrait y avoir.</p>
+                    <p>- Alors une fois que vous avez choisis ce que vous voulez, copier le titre du paquet et rendons nous dans l'invite de commande. (Pour l'exemple je vais choisir bootstrap).</p>
+                    <hr>
+                    <p><small>Saississons :</small></p><br />
+                    <code>
+                        bower install bootstrap
+                    </code>
+                    <hr>
+                    <p>- Laissons le faire et regardons le résultat. Magie, un dossier "bower_components" est apparue dans notre répertoire.</p>
+                    <p>- Voilà, c'est fini... ce fût très compliquer...</p>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
